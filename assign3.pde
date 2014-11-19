@@ -55,7 +55,7 @@ void draw() {
   case GAME_START:
     background(180);
     image(bg, 0, 0, 640, 480);
-    textSize(16);
+    textFont(loadFont("font/Square_One.ttf"),16);
     fill(0);
     text("Choose # of bombs to continue:", 10, width/3-24);
     int spacing = width/9;
@@ -81,7 +81,7 @@ void draw() {
     countOpenedSlot = 0;
     break;
   case GAME_WIN:
-    textSize(18);
+    textFont(loadFont("font/Square_One.ttf"),18);
     fill(0);
     text("YOU WIN !!", width/3, 30);
     for (int col = 0; col<4; col++) {
@@ -99,7 +99,7 @@ void draw() {
 
     break;
   case GAME_LOSE:
-    textSize(18);
+    textFont(loadFont("font/Square_One.ttf"),18);
     fill(0);
     text("YOU LOSE !!", width/3, 30);
     for (int col = 0; col<4; col++) {
